@@ -2328,6 +2328,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"power": ("0.11.85", "_attr_native_value")},
                 }
             },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
         ],
     },
     {
