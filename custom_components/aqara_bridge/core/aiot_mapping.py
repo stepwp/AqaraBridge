@@ -1051,105 +1051,6 @@ AIOT_DEVICE_MAPPING = [
     #         }
     #     ],
     # },
-    ##########################通断器、插座开关#######################################
-    {
-        # 单路控制器 T1（单火版）
-        "lumi.switch.l0acn1": ["Aqara", "Wall Switch (Single Rocker)", ""],
-        # 单路控制器（零火版）
-        "lumi.switch.n0acn2": ["Aqara", "Wall Switch (Single Rocker)", ""],
-        # 智能插座 (国标)
-        "lumi.plug.v1": ["Xiaomi", "Plug", "ZNCZ02LM"],
-        # 智能插座 (国标)
-        "lumi.plug.aq1": ["Xiaomi", "Plug", ""],
-        # 智能插座T1 (国标)
-        "lumi.plug.macn01": ["Aqara", "Plug T1", ""],
-        # 智能墙壁插座 X1（USB版）
-        "lumi.plug.acn003": ["Aqara", "Smart Wall Outlet X1(USB)", ""],
-        # 智能墙壁插座 H1（USB版）
-        "lumi.plug.sacn03": ["Aqara", "Smart Wall Outlet H1(USB)", "QBCZWG11LM"],
-        # 智能墙壁插座 H1
-        "lumi.plug.sacn02": ["Aqara", "Smart Wall Outlet H1", "QBCZWG11LM"],
-        # 墙壁插座（Zigbee版）
-        "lumi.ctrl_86plug.aq1": ["Aqara", "Plug AQ1", ""],
-        "params": [
-            {
-                "switch": {
-                    MK_INIT_PARAMS: {MK_HASS_NAME: "switch"},
-                    MK_RESOURCES: {
-                        "toggle": ("4.1.85", "_attr_is_on"),
-                        "power": ("0.12.85", "_attr_current_power_w"),
-                        "energy": ("0.13.85", "_attr_today_energy_kwh"),
-                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-                    },
-                }
-            },
-            # {
-            #     "sensor": {
-            #         MK_INIT_PARAMS: {
-            #             MK_HASS_NAME: "power",
-            #             "device_class": SensorDeviceClass.POWER,
-            #             "state_class": SensorStateClass.MEASUREMENT,
-            #             "unit_of_measurement": UnitOfPower.WATT,
-            #         },
-            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-            #     }
-            # },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "energy",
-                        "device_class": SensorDeviceClass.ENERGY,
-                        "state_class": "total_increasing",
-                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-                    },
-                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-                }
-            },
-        ],
-    },
-    ###双路控制器、继电器
-    {
-        # 双路控制器
-        "lumi.relay.c2acn01": ["Aqara", "Double Way Controller", ""],
-        # 双路控制模块 T2
-        "lumi.switch.acn047": ["Aqara", "Double Way Controller T2", ""],
-        "params": [
-            {
-                "switch": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "switch",
-                    },
-                    MK_RESOURCES: {
-                        "toggle": ("4.{}.85", "_attr_is_on"),
-                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-                    },
-                    MK_MAPPING_PARAMS: {"ch_count": 2},
-                }
-            },
-            # {
-            #     "sensor": {
-            #         MK_INIT_PARAMS: {
-            #             MK_HASS_NAME: "power",
-            #             "device_class": SensorDeviceClass.POWER,
-            #             "state_class": SensorStateClass.MEASUREMENT,
-            #             "unit_of_measurement": UnitOfPower.WATT,
-            #         },
-            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-            #     }
-            # },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "energy",
-                        "device_class": SensorDeviceClass.ENERGY,
-                        "state_class": "total_increasing",
-                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-                    },
-                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-                }
-            },
-        ],
-    },
     ###############################调光器###########################################
     # 亮度类
     # {
@@ -2261,6 +2162,106 @@ AIOT_DEVICE_MAPPING = [
     #         },
     #     ],
     # },
+    ##########################通断器、插座开关#######################################
+    {
+        # 单路控制器 T1（单火版）
+        "lumi.switch.l0acn1": ["Aqara", "Wall Switch (Single Rocker)", ""],
+        # 单路控制器（零火版）
+        "lumi.switch.n0acn2": ["Aqara", "Wall Switch (Single Rocker)", ""],
+        # 智能插座 (国标)
+        "lumi.plug.v1": ["Xiaomi", "Plug", "ZNCZ02LM"],
+        # 智能插座 (国标)
+        "lumi.plug.aq1": ["Xiaomi", "Plug", ""],
+        # 智能插座T1 (国标)
+        "lumi.plug.macn01": ["Aqara", "Plug T1", ""],
+        # 智能墙壁插座 X1（USB版）
+        "lumi.plug.acn003": ["Aqara", "Smart Wall Outlet X1(USB)", ""],
+        # 智能墙壁插座 H1（USB版）
+        "lumi.plug.sacn03": ["Aqara", "Smart Wall Outlet H1(USB)", "QBCZWG11LM"],
+        # 智能墙壁插座 H1
+        "lumi.plug.sacn02": ["Aqara", "Smart Wall Outlet H1", "QBCZWG11LM"],
+        # 墙壁插座（Zigbee版）
+        "lumi.ctrl_86plug.aq1": ["Aqara", "Plug AQ1", ""],
+        "params": [
+            # {
+            #     "switch": {
+            #         MK_INIT_PARAMS: {MK_HASS_NAME: "switch"},
+            #         MK_RESOURCES: {
+            #             "toggle": ("4.1.85", "_attr_is_on"),
+            #             # "power": ("0.12.85", "_attr_current_power_w"),
+            #             # "energy": ("0.13.85", "_attr_today_energy_kwh"),
+            #             # "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+            #         },
+            #     }
+            # },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    ###双路控制器、继电器
+    {
+        # 双路控制器
+        "lumi.relay.c2acn01": ["Aqara", "Double Way Controller", ""],
+        # 双路控制模块 T2
+        "lumi.switch.acn047": ["Aqara", "Double Way Controller T2", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 2},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+
     #################################空调、地暖####################################
     {
         # 空调伴侣 P3
@@ -2309,14 +2310,14 @@ AIOT_DEVICE_MAPPING = [
                     },
                 }
             },
-            {
-                "switch": {
-                    MK_INIT_PARAMS: {MK_HASS_NAME: "switch"},
-                    MK_RESOURCES: {
-                        "toggle": ("4.1.85", "_attr_is_on"),
-                    },
-                }
-            },
+            # {
+            #     "switch": {
+            #         MK_INIT_PARAMS: {MK_HASS_NAME: "switch"},
+            #         MK_RESOURCES: {
+            #             "toggle": ("4.1.85", "_attr_is_on"),
+            #         },
+            #     }
+            # },
             # {
             #     "sensor": {
             #         MK_INIT_PARAMS: {
