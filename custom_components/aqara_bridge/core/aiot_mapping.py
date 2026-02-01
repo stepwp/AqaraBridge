@@ -1077,9 +1077,9 @@ AIOT_DEVICE_MAPPING = [
                     MK_INIT_PARAMS: {MK_HASS_NAME: "switch"},
                     MK_RESOURCES: {
                         "toggle": ("4.1.85", "_attr_is_on"),
-                        "power": ("0.12.85", "_attr_current_power_w"),
-                        "energy": ("0.13.85", "_attr_today_energy_kwh"),
-                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+                        # "power": ("0.12.85", "_attr_current_power_w"),
+                        # "energy": ("0.13.85", "_attr_today_energy_kwh"),
+                        # "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
                     },
                 }
             },
