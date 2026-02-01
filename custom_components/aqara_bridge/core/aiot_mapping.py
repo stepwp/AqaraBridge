@@ -229,17 +229,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"current": ("0.14.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"current": ("0.14.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -289,17 +289,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -349,17 +349,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -411,17 +411,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -459,17 +459,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"event": ("13.21.85", "_attr_trigger")},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -509,17 +509,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_MAPPING_PARAMS: {"ch_count": 2, "ch_start": 21},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -559,17 +559,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_MAPPING_PARAMS: {"ch_count": 3, "ch_start": 21},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -609,17 +609,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_MAPPING_PARAMS: {"ch_count": 4, "ch_start": 21},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -667,17 +667,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -716,17 +716,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -769,17 +769,17 @@ AIOT_DEVICE_MAPPING = [
                     },
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -851,17 +851,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_MAPPING_PARAMS: {"ch_count": 2},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -961,17 +961,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_MAPPING_PARAMS: {"ch_count": 3},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -1083,17 +1083,17 @@ AIOT_DEVICE_MAPPING = [
                     },
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -1126,17 +1126,17 @@ AIOT_DEVICE_MAPPING = [
                     MK_MAPPING_PARAMS: {"ch_count": 2},
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
@@ -2317,17 +2317,17 @@ AIOT_DEVICE_MAPPING = [
                     },
                 }
             },
-            {
-                "sensor": {
-                    MK_INIT_PARAMS: {
-                        MK_HASS_NAME: "power",
-                        "device_class": SensorDeviceClass.POWER,
-                        "state_class": SensorStateClass.MEASUREMENT,
-                        "unit_of_measurement": UnitOfPower.WATT,
-                    },
-                    MK_RESOURCES: {"power": ("0.11.85", "_attr_native_value")},
-                }
-            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.11.85", "_attr_native_value")},
+            #     }
+            # },
             {
                 "sensor": {
                     MK_INIT_PARAMS: {
