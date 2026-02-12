@@ -556,7 +556,7 @@ class AiotManager:
                 self._entries_devices[config_entry.entry_id].append(device.did)
             else:
                 _LOGGER.warning(
-                    f"Aqara device is not supported. Deivce model is '{device.model}'."
+                    f"Aqara device is not supported. Deivce model is '{device.did}' '{device.model}'."
                 )
                 continue
 
@@ -564,15 +564,50 @@ class AiotManager:
         devices_in_entry = self._entries_devices[config_entry.entry_id]
         platforms = []
         for x in devices_in_entry:
+            resourceids=[]
             if self._managed_devices[x].is_supported:
+                _LOGGER.info(
+                    f"async_forward_entry_setup x values '{x}'."
+                )
                 for i in range(len(self._managed_devices[x].platforms)):
                     platforms.extend(self._managed_devices[x].platforms[i].keys())
+
+                    #sensor类型进行订阅
+                    if 'sensor' in self._managed_devices[x].platforms[i].keys():
+                        #power功率消耗推送值，取消power订阅
+                        if 'power' in self._managed_devices[x].platforms[i]['sensor']['resources'].keys():
+                                unresourceids=[]
+                                unresourceids.append(list(self._managed_devices[x].platforms[i]['sensor']['resources'].values())[0][0])
+                                _LOGGER.warning(
+                                    f"async_unsubscribe_resources '{x}' '{unresourceids}'."
+                                )
+                                resp = await self._session.async_unsubscribe_resources(
+                                    x, unresourceids
+                                )
+                                _LOGGER.warning(f"async_unsubscribe_resources resp: {resp}")
+                                
+                        else:
+                            _LOGGER.info(
+                            f"async_forward_entry_setup1 '{list(self._managed_devices[x].platforms[i]['sensor']['resources'].values())[0][0]}'."
+                            )
+                            resourceids.append(list(self._managed_devices[x].platforms[i]['sensor']['resources'].values())[0][0])
+                            # if 'energy' in self._managed_devices[x].platforms[i]['sensor']['resources'].keys():
+                            #     resourceids.append("0.13.85")
+            _LOGGER.warning(
+                f"async_subscribe_resources '{x}' '{resourceids}'."
+            )
+            #await self._session.async_subscribe_resources(x, resourceids)
+            resp = await self._session.async_subscribe_resources(
+                x, resourceids
+            )
+            _LOGGER.warning(f"async_subscribe_resources resp: {resp}")
 
         self._hass.async_create_task(
             self._hass.config_entries.async_forward_entry_setups(
                 config_entry, set(platforms)
             )
-        )
+        )  
+
 
     async def async_add_entities(
         self, config_entry: ConfigEntry, entity_type: str, cls_list, async_add_entities

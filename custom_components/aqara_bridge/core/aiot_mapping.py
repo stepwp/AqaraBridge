@@ -195,862 +195,866 @@ AIOT_DEVICE_MAPPING = [
     # },
     ################################墙壁开关#########################################
     ###单键
-    # {
-    #     # 卡农 智能墙壁开关 Z1 Pro（单键版）
-    #     "lumi.switch.acn056": ["Aqara", "KN Wall Switch Z1 Pro (Single Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.1.85", "_attr_is_on"),
-    #                 },
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.21.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "slide",
-    #                     "event_mapping": KN_SLIDE_MAPPING,
-    #                     "entity_name": "滑条",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"current": ("0.14.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 卡农 智能墙壁开关 Z1 Pro（双键版）
-    #     "lumi.switch.acn057": ["Aqara", "KN Wall Switch Z1 Pro (Double Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2, "ch_start": 21},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "slide",
-    #                     "event_mapping": KN_SLIDE_MAPPING,
-    #                     "entity_name": "滑条",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 卡农 智能墙壁开关 Z1 Pro（三键版）
-    #     "lumi.switch.acn058": ["Aqara", "KN Wall Switch Z1 Pro (Three Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_3_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3, "ch_start": 21},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "slide",
-    #                     "event_mapping": KN_SLIDE_MAPPING,
-    #                     "entity_name": "滑条",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 卡农 智能墙壁开关 Z1 Pro（四键版）
-    #     "lumi.switch.acn059": ["Aqara", "KN Wall Switch Z1 Pro (Four Rocker)", ""],
-    #     # 智能墙壁开关 Q1（四键版）
-    #     "lumi.switch.acn065": ["Aqara", "Wall Switch Q1 (Four Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_3_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
-    #                 MK_MAPPING_PARAMS: {"ch_count": 4, "ch_start": 21},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "slide",
-    #                     "event_mapping": KN_SLIDE_MAPPING,
-    #                     "entity_name": "滑条",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 卡农 智能墙壁开关 Z1（单键版）
-    #     "lumi.switch.acn054": ["Aqara", "KN Wall Switch Z1 (Single Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.1.85", "_attr_is_on"),
-    #                 },
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.21.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 卡农 智能墙壁开关 Z1（双键版）
-    #     "lumi.switch.acn054": ["Aqara", "KN Wall Switch Z1 (Double Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_3_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2, "ch_start": 21},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 卡农 智能墙壁开关 Z1（三键版）
-    #     "lumi.switch.acn054": ["Aqara", "KN Wall Switch Z1 (Three Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_3_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3, "ch_start": 21},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 卡农 智能墙壁开关 Z1（四键版）
-    #     "lumi.switch.acn055": ["Aqara", "KN Wall Switch Z1 (Four Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_3_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
-    #                 MK_MAPPING_PARAMS: {"ch_count": 4, "ch_start": 21},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 智能墙壁开关 Q1（单键版）
-    #     "lumi.switch.acn062": ["Aqara", "Wall Switch Q1 (Single Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.1.85", "_attr_is_on"),
-    #                 },
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "default",
-    #                     "event_mapping": KN_BUTTON_MAPPING,
-    #                     "entity_name": "无线开关",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.21.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "slide",
-    #                     "event_mapping": KN_SLIDE_MAPPING,
-    #                     "entity_name": "滑条",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 智能墙壁开关 Q1（双键版）
-    #     "lumi.switch.acn063": ["Aqara", "KN Wall Switch Q1 (Double Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2},
-    #             }
-    #         },
-    #         {
-    #             "event": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "slide",
-    #                     "event_mapping": KN_SLIDE_MAPPING,
-    #                     "entity_name": "滑条",
-    #                 },
-    #                 MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 墙壁开关（零火线单键版）
-    #     "lumi.ctrl_ln1.v1": ["Aqara", "Wall Switch (Single Rocker)", ""],
-    #     # 墙壁开关H1M（零火线单键版）
-    #     "lumi.switch.acn029": ["Aqara", "Wall Switch H1M (Single Rocker)", ""],
-    #     # 墙壁开关X1（零火线单键版）
-    #     "lumi.switch.acn004": ["Aqara", "Wall Switch X1 (Single Rocker)", ""],
-    #     # 墙壁开关H1（零火线单键版）
-    #     "lumi.switch.n1acn1": ["Aqara", "Wall Switch H1 (Single Rocker)", "QBKG27LM"],
-    #     # 墙壁开关T1（零火线单键版）
-    #     "lumi.switch.b1nacn01": ["Aqara", "Wall Switch T1 (Single Rocker)", ""],
-    #     # 墙壁开关D1（零火线单键版）
-    #     "lumi.switch.b1nacn02": ["Aqara", "Wall Switch D1 (Single Rocker)", ""],
-    #     # 墙壁开关E1（零火线单键版）
-    #     "lumi.switch.b1nc01": ["Aqara", "Wall Switch E1 (Single Rocker)", ""],
-    #     # 智能墙壁开关 J1（零火线单键版）
-    #     "lumi.switch.acn044": ["Aqara", "Wall Switch J1 (Single Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.1.85", "_attr_is_on"),
-    #                     "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-    #                 },
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 墙壁开关（单火线单键版）
-    #     "lumi.ctrl_neutral1.v1": ["Aqara", "Wall Switch (Single Rocker)", "QBKG04LM"],
-    #     # 墙壁开关X1（单火线单键版）
-    #     "lumi.switch.acn001": ["Aqara", "Wall Switch X1 (Single Rocker)", ""],
-    #     # 墙壁开关H1（单火线单键版）
-    #     "lumi.switch.l1acn1": ["Aqara", "Wall Switch H1 (Single Rocker)", "QBKG27LM"],
-    #     # 墙壁开关T1（单火线单键版）
-    #     "lumi.switch.b1lacn01": ["Aqara", "Wall Switch T1 (Single Rocker)", ""],
-    #     # 墙壁开关D1（单火线单键版）
-    #     "lumi.switch.b1lacn02": ["Aqara", "Wall Switch D1 (Single Rocker)", ""],
-    #     # 墙壁开关E1（单火线单键版）
-    #     "lumi.switch.b1lc04": ["Aqara", "Wall Switch E1 (Single Rocker)", ""],
-    #     # 墙壁开关J1（单火线单键版）
-    #     "lumi.switch.acn041": ["Aqara", "Wall Switch J1 (Single Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.1.85", "_attr_is_on"),
-    #                     "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-    #                 },
-    #             }
-    #         }
-    #     ],
-    # },
-    # ###双键
-    # {
-    #     # 墙壁开关（零火线双键版）
-    #     "lumi.ctrl_ln2.v1": ["Aqara", "Wall Switch (Double Rocker)", ""],
-    #     # 墙壁开关H1M（零火线双键版）
-    #     "lumi.switch.acn030": ["Aqara", "Wall Switch H1M (Double Rocker)", ""],
-    #     # 墙壁开关X1（零火线双键版）
-    #     "lumi.switch.acn005": ["Aqara", "Wall Switch X1 (Double Rocker)", ""],
-    #     # 墙壁开关H1（零火线双键版）
-    #     "lumi.switch.n2acn1": ["Aqara", "Wall Switch H1 (Double Rocker)", "QBKG27LM"],
-    #     # 墙壁开关T1（零火线双键版）
-    #     "lumi.switch.b2nacn01": ["Aqara", "Wall Switch T1 (Double Rocker)", ""],
-    #     # 墙壁开关D1（零火线双键版）
-    #     "lumi.switch.b2nacn02": ["Aqara", "Wall Switch D1 (Double Rocker)", ""],
-    #     # 墙壁开关E1（零火线双键版）
-    #     "lumi.switch.b2nc01": ["Aqara", "Wall Switch E1 (Double Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                     "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 智能墙壁开关 J1（零火线双键版）
-    #     "lumi.switch.acn045": ["Aqara", "Wall Switch J1 (Double Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                     "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2},
-    #             }
-    #         },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 墙壁开关（单火线双键版）
-    #     "lumi.ctrl_neutral2.v1": ["Aqara", "Wall Switch (Double Rocker)", "QBKG04LM"],
-    #     # 墙壁开关X1（单火线双键版）
-    #     "lumi.switch.acn002": ["Aqara", "Wall Switch X1 (Double Rocker)", ""],
-    #     # 墙壁开关H1（单火线双键版）
-    #     "lumi.switch.l2acn1": ["Aqara", "Wall Switch H1 (Double Rocker)", "QBKG28LM"],
-    #     # 墙壁开关T1（单火线双键版）
-    #     "lumi.switch.b2lacn01": ["Aqara", "Wall Switch T1 (Double Rocker)", ""],
-    #     # 墙壁开关D1（单火线双键版）
-    #     "lumi.switch.b2lacn02": ["Aqara", "Wall Switch D1 (Double Rocker)", "QBKG21LM"],
-    #     # 墙壁开关E1（单火线双键版）
-    #     "lumi.switch.b2lc04": ["Aqara", "Wall Switch E1 (Double Rocker)", "QBKG21LM"],
-    #     # 智能墙壁开关 J1（单火线双键版）
-    #     "lumi.switch.acn042": ["Aqara", "Wall Switch J1 (Double Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                     "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 2},
-    #             }
-    #         }
-    #     ],
-    # },
-    # ###三键
-    # {
-    #     # 墙壁开关H1M（零火线三键版）
-    #     "lumi.switch.acn031": ["Aqara", "Wall Switch H1M (Three Rocker)", ""],
-    #     # 墙壁开关X1（零火线三键版）
-    #     "lumi.switch.acn006": ["Aqara", "Wall Switch X1 (Three Rocker)", ""],
-    #     # 墙壁开关H1（零火线三键版）
-    #     "lumi.switch.n3acn1": ["Aqara", "Wall Switch H1 (Three Rocker)", "QBKG27LM"],
-    #     # 墙壁开关T1（零火线三键版）
-    #     "lumi.switch.b3n01": ["Aqara", "Wall Switch T1 (Three Rocker)", ""],
-    #     # 智能场景面板开关 S1（零火线三键版）
-    #     "lumi.switch.n4acn4": ["Aqara", "screen panel S1 (Three Rocker)", ""],
-    #     # 智能墙壁开关D1（零火线三键版）
-    #     "lumi.switch.n3acn3": ["Aqara", "Wall Switch D1 (Three Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                     "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         },
-    #         # {
-    #         #     "sensor": {
-    #         #         MK_INIT_PARAMS: {
-    #         #             MK_HASS_NAME: "power",
-    #         #             "device_class": SensorDeviceClass.POWER,
-    #         #             "state_class": SensorStateClass.MEASUREMENT,
-    #         #             "unit_of_measurement": UnitOfPower.WATT,
-    #         #         },
-    #         #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
-    #         #     }
-    #         # },
-    #         {
-    #             "sensor": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "energy",
-    #                     "device_class": SensorDeviceClass.ENERGY,
-    #                     "state_class": "total_increasing",
-    #                     "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
-    #                 },
-    #                 MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
-    #             }
-    #         },
-    #     ],
-    # },
-    # {
-    #     # 智能墙壁开关 E1（零火线三键版）
-    #     "lumi.switch.acn040": ["Aqara", "Wall Switch E1 (Three Rocker)", ""],
-    #     # 智能墙壁开关 J1（零火线三键版）
-    #     "lumi.switch.acn046": ["Aqara", "Wall Switch J1 (Three Rocker)", ""],
-    #     # 妙控开关 V1（四键版）
-    #     "lumi.switch.acn051": ["Aqara", "Wall Switch V1", ""],
-    #     # 繁星旋钮 V1
-    #     "lumi.switch.acn053": ["Aqara", "Wall Switch V1", ""],
-    #     # 妙控开关 S1E
-    #     "lumi.switch.acn032": ["Aqara", "Wall Switch S1E", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         }
-    #     ],
-    # },
-    # {
-    #     # 墙壁开关X1（单火线三键版）
-    #     "lumi.switch.acn003": ["Aqara", "Wall Switch X1 (Three Rocker)", ""],
-    #     # 墙壁开关H1（单火线三键版）
-    #     "lumi.switch.l3acn1": ["Aqara", "Wall Switch H1 (Three Rocker)", "QBKG29LM"],
-    #     # 墙壁开关T1（单火线三键版）
-    #     "lumi.switch.b3l01": ["Aqara", "Wall Switch T1 (Three Rocker)", ""],
-    #     # 智能墙壁开关D1（单火线三键版）
-    #     "lumi.switch.l3acn3": ["Aqara", "Wall Switch D1 (Three Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                     "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         }
-    #     ],
-    # },
-    # {
-    #     # 墙壁开关J1（单火线三键版）
-    #     "lumi.switch.acn043": ["Aqara", "Wall Switch J1 (Three Rocker)", ""],
-    #     "params": [
-    #         {
-    #             "switch": {
-    #                 MK_INIT_PARAMS: {
-    #                     MK_HASS_NAME: "wall_switch",
-    #                 },
-    #                 MK_RESOURCES: {
-    #                     "toggle": ("4.{}.85", "_attr_is_on"),
-    #                 },
-    #                 MK_MAPPING_PARAMS: {"ch_count": 3},
-    #             }
-    #         }
-    #     ],
-    # },
+    {
+        # 卡农 智能墙壁开关 Z1 Pro（单键版）
+        "lumi.switch.acn056": ["Aqara", "KN Wall Switch Z1 Pro (Single Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.1.85", "_attr_is_on"),
+                    },
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.21.85", "_attr_trigger")},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "slide",
+                        "event_mapping": KN_SLIDE_MAPPING,
+                        "entity_name": "滑条",
+                    },
+                    MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"current": ("0.14.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 卡农 智能墙壁开关 Z1 Pro（双键版）
+        "lumi.switch.acn057": ["Aqara", "KN Wall Switch Z1 Pro (Double Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 2},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
+                    MK_MAPPING_PARAMS: {"ch_count": 2, "ch_start": 21},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "slide",
+                        "event_mapping": KN_SLIDE_MAPPING,
+                        "entity_name": "滑条",
+                    },
+                    MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 卡农 智能墙壁开关 Z1 Pro（三键版）
+        "lumi.switch.acn058": ["Aqara", "KN Wall Switch Z1 Pro (Three Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 3},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_3_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
+                    MK_MAPPING_PARAMS: {"ch_count": 3, "ch_start": 21},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "slide",
+                        "event_mapping": KN_SLIDE_MAPPING,
+                        "entity_name": "滑条",
+                    },
+                    MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 卡农 智能墙壁开关 Z1 Pro（四键版）
+        "lumi.switch.acn059": ["Aqara", "KN Wall Switch Z1 Pro (Four Rocker)", ""],
+        # 智能墙壁开关 Q1（四键版）
+        "lumi.switch.acn065": ["Aqara", "Wall Switch Q1 (Four Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 3},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_3_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
+                    MK_MAPPING_PARAMS: {"ch_count": 4, "ch_start": 21},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "slide",
+                        "event_mapping": KN_SLIDE_MAPPING,
+                        "entity_name": "滑条",
+                    },
+                    MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 卡农 智能墙壁开关 Z1（单键版）
+        "lumi.switch.acn054": ["Aqara", "KN Wall Switch Z1 (Single Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.1.85", "_attr_is_on"),
+                    },
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.21.85", "_attr_trigger")},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 卡农 智能墙壁开关 Z1（双键版）
+        "lumi.switch.acn054": ["Aqara", "KN Wall Switch Z1 (Double Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 2},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_3_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
+                    MK_MAPPING_PARAMS: {"ch_count": 2, "ch_start": 21},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 卡农 智能墙壁开关 Z1（三键版）
+        "lumi.switch.acn054": ["Aqara", "KN Wall Switch Z1 (Three Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 3},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_3_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
+                    MK_MAPPING_PARAMS: {"ch_count": 3, "ch_start": 21},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 卡农 智能墙壁开关 Z1（四键版）
+        "lumi.switch.acn055": ["Aqara", "KN Wall Switch Z1 (Four Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 3},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_3_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.{}.85", "_attr_trigger")},
+                    MK_MAPPING_PARAMS: {"ch_count": 4, "ch_start": 21},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 智能墙壁开关 Q1（单键版）
+        "lumi.switch.acn062": ["Aqara", "Wall Switch Q1 (Single Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.1.85", "_attr_is_on"),
+                    },
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "default",
+                        "event_mapping": KN_BUTTON_MAPPING,
+                        "entity_name": "无线开关",
+                    },
+                    MK_RESOURCES: {"event": ("13.21.85", "_attr_trigger")},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "slide",
+                        "event_mapping": KN_SLIDE_MAPPING,
+                        "entity_name": "滑条",
+                    },
+                    MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 智能墙壁开关 Q1（双键版）
+        "lumi.switch.acn063": ["Aqara", "KN Wall Switch Q1 (Double Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 2},
+                }
+            },
+            {
+                "event": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "slide",
+                        "event_mapping": KN_SLIDE_MAPPING,
+                        "entity_name": "滑条",
+                    },
+                    MK_RESOURCES: {"event": ("13.1.85", "_attr_trigger")},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 墙壁开关（零火线单键版）
+        "lumi.ctrl_ln1.v1": ["Aqara", "Wall Switch (Single Rocker)", ""],
+        # 墙壁开关H1M（零火线单键版）
+        "lumi.switch.acn029": ["Aqara", "Wall Switch H1M (Single Rocker)", ""],
+        # 墙壁开关X1（零火线单键版）
+        "lumi.switch.acn004": ["Aqara", "Wall Switch X1 (Single Rocker)", ""],
+        # 墙壁开关H1（零火线单键版）
+        "lumi.switch.n1acn1": ["Aqara", "Wall Switch H1 (Single Rocker)", "QBKG27LM"],
+        # 墙壁开关T1（零火线单键版）
+        "lumi.switch.b1nacn01": ["Aqara", "Wall Switch T1 (Single Rocker)", ""],
+        # 墙壁开关D1（零火线单键版）
+        "lumi.switch.b1nacn02": ["Aqara", "Wall Switch D1 (Single Rocker)", ""],
+        # 墙壁开关E1（零火线单键版）
+        "lumi.switch.b1nc01": ["Aqara", "Wall Switch E1 (Single Rocker)", ""],
+        # 智能墙壁开关 J1（零火线单键版）
+        "lumi.switch.acn044": ["Aqara", "Wall Switch J1 (Single Rocker)", ""],
+        "params": [
+            # {
+            #     "switch": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "wall_switch",
+            #         },
+            #         MK_RESOURCES: {
+            #             "toggle": ("4.1.85", "_attr_is_on"),
+            #             "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+            #         },
+            #     }
+            # },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 墙壁开关（单火线单键版）
+        "lumi.ctrl_neutral1.v1": ["Aqara", "Wall Switch (Single Rocker)", "QBKG04LM"],
+        # 墙壁开关X1（单火线单键版）
+        "lumi.switch.acn001": ["Aqara", "Wall Switch X1 (Single Rocker)", ""],
+        # 墙壁开关H1（单火线单键版）
+        "lumi.switch.l1acn1": ["Aqara", "Wall Switch H1 (Single Rocker)", "QBKG27LM"],
+        # 墙壁开关T1（单火线单键版）
+        "lumi.switch.b1lacn01": ["Aqara", "Wall Switch T1 (Single Rocker)", ""],
+        # 墙壁开关D1（单火线单键版）
+        "lumi.switch.b1lacn02": ["Aqara", "Wall Switch D1 (Single Rocker)", ""],
+        # 墙壁开关E1（单火线单键版）
+        "lumi.switch.b1lc04": ["Aqara", "Wall Switch E1 (Single Rocker)", ""],
+        # 墙壁开关J1（单火线单键版）
+        "lumi.switch.acn041": ["Aqara", "Wall Switch J1 (Single Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.1.85", "_attr_is_on"),
+                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+                    },
+                }
+            }
+        ],
+    },
+    ###双键
+    {
+        # 墙壁开关（零火线双键版）
+        "lumi.ctrl_ln2.v1": ["Aqara", "Wall Switch (Double Rocker)", ""],
+        # 墙壁开关H1M（零火线双键版）
+        "lumi.switch.acn030": ["Aqara", "Wall Switch H1M (Double Rocker)", ""],
+        # 墙壁开关X1（零火线双键版）
+        "lumi.switch.acn005": ["Aqara", "Wall Switch X1 (Double Rocker)", ""],
+        # 墙壁开关H1（零火线双键版）
+        "lumi.switch.n2acn1": ["Aqara", "Wall Switch H1 (Double Rocker)", "QBKG27LM"],
+        # 墙壁开关T1（零火线双键版）
+        "lumi.switch.b2nacn01": ["Aqara", "Wall Switch T1 (Double Rocker)", ""],
+        # 墙壁开关D1（零火线双键版）
+        "lumi.switch.b2nacn02": ["Aqara", "Wall Switch D1 (Double Rocker)", ""],
+        # 墙壁开关E1（零火线双键版）
+        "lumi.switch.b2nc01": ["Aqara", "Wall Switch E1 (Double Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 2},
+                }
+            },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 智能墙壁开关 J1（零火线双键版）
+        "lumi.switch.acn045": ["Aqara", "Wall Switch J1 (Double Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 2},
+                }
+            },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 墙壁开关（单火线双键版）
+        "lumi.ctrl_neutral2.v1": ["Aqara", "Wall Switch (Double Rocker)", "QBKG04LM"],
+        # 墙壁开关X1（单火线双键版）
+        "lumi.switch.acn002": ["Aqara", "Wall Switch X1 (Double Rocker)", ""],
+        # 墙壁开关H1（单火线双键版）
+        "lumi.switch.l2acn1": ["Aqara", "Wall Switch H1 (Double Rocker)", "QBKG28LM"],
+        # 墙壁开关T1（单火线双键版）
+        "lumi.switch.b2lacn01": ["Aqara", "Wall Switch T1 (Double Rocker)", ""],
+        # 墙壁开关D1（单火线双键版）
+        "lumi.switch.b2lacn02": ["Aqara", "Wall Switch D1 (Double Rocker)", "QBKG21LM"],
+        # 墙壁开关E1（单火线双键版）
+        "lumi.switch.b2lc04": ["Aqara", "Wall Switch E1 (Double Rocker)", "QBKG21LM"],
+        # 智能墙壁开关 J1（单火线双键版）
+        "lumi.switch.acn042": ["Aqara", "Wall Switch J1 (Double Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 2},
+                }
+            }
+        ],
+    },
+    ###三键
+    {
+        # 墙壁开关H1M（零火线三键版）
+        "lumi.switch.acn031": ["Aqara", "Wall Switch H1M (Three Rocker)", ""],
+        # 墙壁开关X1（零火线三键版）
+        "lumi.switch.acn006": ["Aqara", "Wall Switch X1 (Three Rocker)", ""],
+        # 墙壁开关H1（零火线三键版）
+        "lumi.switch.n3acn1": ["Aqara", "Wall Switch H1 (Three Rocker)", "QBKG27LM"],
+        # 墙壁开关T1（零火线三键版）
+        "lumi.switch.b3n01": ["Aqara", "Wall Switch T1 (Three Rocker)", ""],
+        # 智能场景面板开关 S1（零火线三键版）
+        "lumi.switch.n4acn4": ["Aqara", "screen panel S1 (Three Rocker)", ""],
+        # 智能场景面板开关 S1 plus
+        "lumi.switch.acn034": ["Aqara", "screen panel S1 plus", ""],
+        # aqara H1旋钮
+        "lumi.switch.rkna01": ["Aqara", "Wall Switch H1 rk", ""],
+        # 智能墙壁开关D1（零火线三键版）
+        "lumi.switch.n3acn3": ["Aqara", "Wall Switch D1 (Three Rocker)", ""],
+        "params": [
+            # {
+            #     "switch": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "wall_switch",
+            #         },
+            #         MK_RESOURCES: {
+            #             "toggle": ("4.{}.85", "_attr_is_on"),
+            #             "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+            #         },
+            #         MK_MAPPING_PARAMS: {"ch_count": 3},
+            #     }
+            # },
+            # {
+            #     "sensor": {
+            #         MK_INIT_PARAMS: {
+            #             MK_HASS_NAME: "power",
+            #             "device_class": SensorDeviceClass.POWER,
+            #             "state_class": SensorStateClass.MEASUREMENT,
+            #             "unit_of_measurement": UnitOfPower.WATT,
+            #         },
+            #         MK_RESOURCES: {"power": ("0.12.85", "_attr_native_value")},
+            #     }
+            # },
+            {
+                "sensor": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "energy",
+                        "device_class": SensorDeviceClass.ENERGY,
+                        "state_class": "total_increasing",
+                        "unit_of_measurement": UnitOfEnergy.KILO_WATT_HOUR,
+                    },
+                    MK_RESOURCES: {"energy": ("0.13.85", "_attr_native_value")},
+                }
+            },
+        ],
+    },
+    {
+        # 智能墙壁开关 E1（零火线三键版）
+        "lumi.switch.acn040": ["Aqara", "Wall Switch E1 (Three Rocker)", ""],
+        # 智能墙壁开关 J1（零火线三键版）
+        "lumi.switch.acn046": ["Aqara", "Wall Switch J1 (Three Rocker)", ""],
+        # 妙控开关 V1（四键版）
+        "lumi.switch.acn051": ["Aqara", "Wall Switch V1", ""],
+        # 繁星旋钮 V1
+        "lumi.switch.acn053": ["Aqara", "Wall Switch V1", ""],
+        # 妙控开关 S1E
+        # "lumi.switch.acn032": ["Aqara", "Wall Switch S1E", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 3},
+                }
+            }
+        ],
+    },
+    {
+        # 墙壁开关X1（单火线三键版）
+        "lumi.switch.acn003": ["Aqara", "Wall Switch X1 (Three Rocker)", ""],
+        # 墙壁开关H1（单火线三键版）
+        #"lumi.switch.l3acn1": ["Aqara", "Wall Switch H1 (Three Rocker)", "QBKG29LM"],
+        # 墙壁开关T1（单火线三键版）
+        "lumi.switch.b3l01": ["Aqara", "Wall Switch T1 (Three Rocker)", ""],
+        # 智能墙壁开关D1（单火线三键版）
+        "lumi.switch.l3acn3": ["Aqara", "Wall Switch D1 (Three Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                        "zigbee_lqi": ("8.0.2007", "_attr_zigbee_lqi"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 3},
+                }
+            }
+        ],
+    },
+    {
+        # 墙壁开关J1（单火线三键版）
+        "lumi.switch.acn043": ["Aqara", "Wall Switch J1 (Three Rocker)", ""],
+        "params": [
+            {
+                "switch": {
+                    MK_INIT_PARAMS: {
+                        MK_HASS_NAME: "wall_switch",
+                    },
+                    MK_RESOURCES: {
+                        "toggle": ("4.{}.85", "_attr_is_on"),
+                    },
+                    MK_MAPPING_PARAMS: {"ch_count": 3},
+                }
+            }
+        ],
+    },
     ###############################调光器###########################################
     # 亮度类
     # {
@@ -2165,7 +2169,7 @@ AIOT_DEVICE_MAPPING = [
     ##########################通断器、插座开关#######################################
     {
         # 单路控制器 T1（单火版）
-        "lumi.switch.l0acn1": ["Aqara", "Wall Switch (Single Rocker)", ""],
+        # "lumi.switch.l0acn1": ["Aqara", "Wall Switch (Single Rocker)", ""],
         # 单路控制器（零火版）
         "lumi.switch.n0acn2": ["Aqara", "Wall Switch (Single Rocker)", ""],
         # 智能插座 (国标)
@@ -2180,6 +2184,8 @@ AIOT_DEVICE_MAPPING = [
         "lumi.plug.sacn03": ["Aqara", "Smart Wall Outlet H1(USB)", "QBCZWG11LM"],
         # 智能墙壁插座 H1
         "lumi.plug.sacn02": ["Aqara", "Smart Wall Outlet H1", "QBCZWG11LM"],
+        # 智能墙壁插座 H2
+        "lumi.plug.acn005": ["Aqara", "Smart Wall Outlet H2", ""],
         # 墙壁插座（Zigbee版）
         "lumi.ctrl_86plug.aq1": ["Aqara", "Plug AQ1", ""],
         "params": [
