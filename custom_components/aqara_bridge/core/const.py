@@ -37,6 +37,11 @@ CONF_ENTRY_AUTH_OPENID = "open_id"
 HASS_DATA_AUTH_ENTRY_ID = "auth_entry_id"
 HASS_DATA_AIOTCLOUD = "aiotcloud"
 HASS_DATA_AIOT_MANAGER = "aiot_manager"
+HASS_DATA_TOKEN_REFRESH_TIMER = "token_refresh_timer"
+
+# Token Management
+TOKEN_REFRESH_ADVANCE_DAYS = 1  # 提前1天刷新令牌
+TOKEN_CHECK_INTERVAL_HOURS = 1  # 每小时检查一次令牌状态
 
 ATTR_FIRMWARE_VERSION = "firmware_version"
 ATTR_ZIGBEE_LQI = "zigbee_lqi"

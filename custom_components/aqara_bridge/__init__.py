@@ -2,10 +2,12 @@ import datetime
 from email import message
 import re
 import logging
+from datetime import timedelta
 
 from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers import aiohttp_client
+from homeassistant.helpers.event import async_track_time_interval
 
 from .core.aiot_manager import (
     AiotManager,
@@ -67,6 +69,99 @@ async def async_setup(hass, config):
     """Setup component."""
     init_hass_data(hass)
     return True
+
+
+async def async_refresh_token_handler(hass: HomeAssistant, entry: ConfigEntry):
+    """定期检查并刷新令牌的处理函数"""
+    try:
+        data = entry.data.copy()
+        aiotcloud: AiotCloud = hass.data[DOMAIN][HASS_DATA_AIOTCLOUD]
+
+        # 解析过期时间
+        expires_time = datetime.datetime.strptime(
+            data.get(CONF_ENTRY_AUTH_EXPIRES_TIME), "%Y-%m-%d %H:%M:%S"
+        )
+
+        # 计算剩余时间
+        now = datetime.datetime.now()
+        time_remaining = expires_time - now
+
+        # 如果令牌在指定天数内即将过期，执行刷新
+        if time_remaining <= timedelta(days=TOKEN_REFRESH_ADVANCE_DAYS):
+            _LOGGER.info(
+                f"Token will expire in {time_remaining}, refreshing now..."
+            )
+
+            # 执行令牌刷新
+            resp = await aiotcloud.async_refresh_token(
+                data.get(CONF_ENTRY_AUTH_REFRESH_TOKEN)
+            )
+
+            if isinstance(resp, dict) and resp.get("code") == 0:
+                # 刷新成功，更新配置
+                auth_entry = gen_auth_entry(
+                    data.get(CONF_ENTRY_APP_ID),
+                    data.get(CONF_ENTRY_APP_KEY),
+                    data.get(CONF_ENTRY_KEY_ID),
+                    data.get(CONF_ENTRY_AUTH_ACCOUNT),
+                    data.get(CONF_ENTRY_AUTH_ACCOUNT_TYPE),
+                    data.get(CONF_ENTRY_AUTH_COUNTRY_CODE),
+                    resp["result"],
+                )
+                hass.config_entries.async_update_entry(entry, data=auth_entry)
+
+                # 更新 aiotcloud 中的令牌
+                aiotcloud.access_token = resp["result"]["accessToken"]
+                aiotcloud.refresh_token = resp["result"]["refreshToken"]
+
+                _LOGGER.info("Token refreshed successfully")
+            else:
+                # 刷新失败，记录错误并降级运行
+                _LOGGER.error(
+                    f"Token refresh failed: {resp}. Running in degraded mode."
+                )
+        else:
+            _LOGGER.debug(
+                f"Token is still valid, expires in {time_remaining}"
+            )
+
+    except Exception as e:
+        _LOGGER.error(f"Error in token refresh handler: {e}", exc_info=True)
+
+
+async def async_setup_token_refresh(hass: HomeAssistant, entry: ConfigEntry):
+    """设置令牌自动刷新定时器"""
+    # 立即检查一次令牌状态
+    await async_refresh_token_handler(hass, entry)
+
+    # 设置定期检查（每小时检查一次）
+    async def _refresh_wrapper(now):
+        await async_refresh_token_handler(hass, entry)
+
+    cancel_timer = async_track_time_interval(
+        hass,
+        _refresh_wrapper,
+        timedelta(hours=TOKEN_CHECK_INTERVAL_HOURS)
+    )
+
+    # 保存取消函数，以便后续清理
+    if DOMAIN not in hass.data:
+        hass.data[DOMAIN] = {}
+    hass.data[DOMAIN][HASS_DATA_TOKEN_REFRESH_TIMER] = cancel_timer
+
+    _LOGGER.info(
+        f"Token refresh timer started, checking every {TOKEN_CHECK_INTERVAL_HOURS} hour(s)"
+    )
+
+
+async def async_cancel_token_refresh(hass: HomeAssistant):
+    """取消令牌刷新定时器"""
+    if DOMAIN in hass.data:
+        cancel_timer = hass.data[DOMAIN].get(HASS_DATA_TOKEN_REFRESH_TIMER)
+        if cancel_timer:
+            cancel_timer()
+            hass.data[DOMAIN][HASS_DATA_TOKEN_REFRESH_TIMER] = None
+            _LOGGER.info("Token refresh timer cancelled")
 
 
 async def async_setup_entry(hass, entry):
@@ -136,10 +231,16 @@ async def async_setup_entry(hass, entry):
     else:
         await manager.async_add_all_devices(entry)
 
+    # 启动令牌自动刷新定时器
+    await async_setup_token_refresh(hass, entry)
+
     return True
 
 
 async def async_unload_entry(hass, entry):
+    # 取消令牌刷新定时器
+    await async_cancel_token_refresh(hass)
+
     # if CONF_ENTRY_AUTH_ACCOUNT in entry.data:
     #     hass.data[DOMAIN][HASS_DATA_AUTH_ENTRY_ID] = None
     # else:

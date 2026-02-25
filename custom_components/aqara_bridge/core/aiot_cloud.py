@@ -146,9 +146,9 @@ class AiotCloud:
                                 intent, only_result, list_data, **kwargs
                             )
                         else:
-                            # Aiot令牌更新失败，请重新授权
+                            # Aiot令牌更新失败，降级运行
                             _LOGGER.error(
-                                "Aiot token refresh failed, please do authorization again！"
+                                "Aiot token refresh failed, running in degraded mode"
                             )
                 return jo.get("result")
             else:
