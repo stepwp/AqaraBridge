@@ -1,0 +1,32 @@
+{
+  "model": "lumi.airmonitor.acn01",
+  "device_name": "TVOC空气健康伴侣",
+  "model_type": 3,
+  "resources": {
+    "0.3.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "224.000000"
+    },
+    "0.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2631"
+    },
+    "0.2.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "8108"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "200"
+    }
+  },
+  "fetched_at": "2026-05-02T23:52:05.533761"
+}

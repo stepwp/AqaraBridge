@@ -1,0 +1,50 @@
+{
+  "model": "lumi.motion.agl04",
+  "device_name": "高精度人体传感器",
+  "model_type": 3,
+  "resources": {
+    "3.1.85": {
+      "name": "有人无人状态",
+      "description": "当前状态，有人/无人",
+      "access": 3,
+      "value": "1"
+    },
+    "8.0.2115": {
+      "name": "侦测时间",
+      "description": "侦测时间，单位秒，非采样时间，例如人体，该时间为下次上报有人事件的最长时间。0～255",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2007": {
+      "name": "Zigbee信号强度",
+      "description": "Zigbee信号强度",
+      "access": 7,
+      "value": "80"
+    },
+    "8.0.2008": {
+      "name": "电池电压值",
+      "description": "电池电压值，单位mv,只读",
+      "access": 7,
+      "value": "3137"
+    },
+    "8.0.2041": {
+      "name": "Model ID",
+      "description": "zigbee设备向网关上报model id时（比如戳设备小孔），网关向云端上报该资源",
+      "access": 7,
+      "value": ""
+    },
+    "14.1.85": {
+      "name": "灵敏度调节",
+      "description": "灵敏度调节，1:低，2：中（默认），3：高",
+      "access": 7,
+      "value": "2"
+    },
+    "8.0.9001": {
+      "name": "电池电量情况，1低电量，0恢复电量,只读",
+      "description": "电池电量情况，1低电量，0恢复电量,只读",
+      "access": 7,
+      "value": "0"
+    }
+  },
+  "fetched_at": "2026-05-03T00:28:36.158167"
+}

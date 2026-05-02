@@ -1,0 +1,32 @@
+{
+  "model": "lumi.light.acn003",
+  "device_name": "Aqara吸顶灯L1-350",
+  "model_type": 3,
+  "resources": {
+    "1.7.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "100"
+    },
+    "1.9.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "370"
+    },
+    "4.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "0"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "204"
+    }
+  },
+  "fetched_at": "2026-05-02T23:52:15.640531"
+}

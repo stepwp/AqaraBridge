@@ -1,0 +1,18 @@
+# Aqara API 配置文件
+# 复制为 config.yaml 并填入真实值: cp config.example.yaml config.yaml
+
+# 开发者账号信息（从 Aqara 开放平台获取）
+app_id: "your_app_id"
+app_key: "your_app_key"
+key_id: "your_key_id"
+
+# 用户账号
+account: "your_phone_or_email"
+
+# 服务器区域: CN, USA, KR, RU, GER
+country_code: "CN"
+
+# 以下字段由 auth.py 自动写入，无需手动填写
+access_token: ""
+refresh_token: ""
+expires_time: ""

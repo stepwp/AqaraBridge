@@ -1,0 +1,38 @@
+{
+  "model": "aqara.airrtc.acn02",
+  "device_name": "温控伴侣 T1（室内机）",
+  "model_type": 3,
+  "resources": {
+    "1.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2500.000000"
+    },
+    "4.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "1"
+    },
+    "0.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2400"
+    },
+    "14.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "0"
+    },
+    "14.140.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "1"
+    }
+  },
+  "fetched_at": "2026-05-02T23:51:05.373707"
+}

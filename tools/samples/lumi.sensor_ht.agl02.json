@@ -1,0 +1,38 @@
+{
+  "model": "lumi.sensor_ht.agl02",
+  "device_name": "温湿度传感器T1",
+  "model_type": 3,
+  "resources": {
+    "0.3.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "100800"
+    },
+    "0.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2591"
+    },
+    "0.2.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "8203"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "208"
+    },
+    "8.0.2008": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2915"
+    }
+  },
+  "fetched_at": "2026-05-02T23:53:25.212564"
+}

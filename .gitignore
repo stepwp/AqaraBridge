@@ -123,6 +123,7 @@ desktop.ini
 
 # Secrets
 .lokalise_token
+tools/config.yaml
 
 # monkeytype
 monkeytype.sqlite3
