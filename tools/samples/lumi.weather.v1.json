@@ -1,0 +1,38 @@
+{
+  "model": "lumi.weather.v1",
+  "device_name": "温湿度传感器",
+  "model_type": 3,
+  "resources": {
+    "0.3.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "101030"
+    },
+    "0.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2750"
+    },
+    "0.2.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "7918"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "168"
+    },
+    "8.0.2008": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "3045"
+    }
+  },
+  "fetched_at": "2026-05-02T23:55:41.264824"
+}

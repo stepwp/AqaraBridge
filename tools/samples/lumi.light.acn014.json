@@ -1,0 +1,32 @@
+{
+  "model": "lumi.light.acn014",
+  "device_name": "Aqara LED灯泡 T1（可调色温）",
+  "model_type": 7,
+  "resources": {
+    "1.7.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "72"
+    },
+    "1.9.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "269"
+    },
+    "4.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "1"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "188"
+    }
+  },
+  "fetched_at": "2026-05-02T23:52:29.667066"
+}

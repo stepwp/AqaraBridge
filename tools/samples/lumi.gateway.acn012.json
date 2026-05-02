@@ -1,0 +1,188 @@
+{
+  "model": "lumi.gateway.acn012",
+  "device_name": "智慧家庭中枢M3",
+  "model_type": 1,
+  "resources": {
+    "14.2.113": {
+      "name": "门铃时长",
+      "description": "门铃时长，-1表示循环播放，0表示只播放一次，大于0表示播放的秒数",
+      "access": 7,
+      "value": ""
+    },
+    "14.11.85": {
+      "name": "系统音量",
+      "description": "系统音量",
+      "access": 7,
+      "value": "27"
+    },
+    "0.2.85": {
+      "name": "当前湿度",
+      "description": "显示和查询设备识别的湿度",
+      "access": 3,
+      "value": "8678"
+    },
+    "14.3.1000": {
+      "name": "音乐音量",
+      "description": "音乐音量,0~100",
+      "access": 7,
+      "value": ""
+    },
+    "14.17.85": {
+      "name": "速冷时间配置",
+      "description": "速冷时间配置",
+      "access": 7,
+      "value": "10"
+    },
+    "14.40.85": {
+      "name": "语言配置",
+      "description": "语言配置： 0 中文 1 英文 2...",
+      "access": 7,
+      "value": ""
+    },
+    "14.10.85": {
+      "name": "网关语言",
+      "description": "网关语言，1：中文，2：英文。",
+      "access": 7,
+      "value": "1"
+    },
+    "8.0.2158": {
+      "name": "防误删设置",
+      "description": "网关下子设备防误删开启/关闭，1:开启， 0:关闭",
+      "access": 7,
+      "value": "1"
+    },
+    "8.0.2108": {
+      "name": "重启设备",
+      "description": "重启设备。网关=0，协调器=1",
+      "access": 7,
+      "value": "0"
+    },
+    "14.6.111": {
+      "name": "布防状态(现已将此资源的功能等同于14.1.111报警状态)",
+      "description": "布防状态：1:开/0:关/2:启动中/3:toggle /4:消警但不撤防",
+      "access": 7,
+      "value": ""
+    },
+    "13.2.85": {
+      "name": "空调类型",
+      "description": "0：协议码空调\r\n1：无状态空调\r\n2：有状态空调",
+      "access": 3,
+      "value": "0"
+    },
+    "14.1.1000": {
+      "name": "报警音量",
+      "description": "报警音音量,0~100",
+      "access": 7,
+      "value": ""
+    },
+    "14.26.85": {
+      "name": "空调控制范围",
+      "description": "有状态空调控制范围矫正：首先获得空调默认范围, 由用户在界面上进一步裁剪后下发; 匹配新的码库后，会上报该资源\r\n\r\n字段说明：\r\n\r\n* match: 0-已匹配; 1-匹配中\r\n\r\n* mode/speeds/temps/directs/light: 模式/风速/温控/风向/灯光\r\n\r\n* type: 0-不支持风向调节; 1-仅固定风向; 2-支持扫风和固定风向\r\n\r\n* disL: 0-使用light配置; 1-禁用灯光调节\r\n\r\n* disD: 0-视type情况支持扫风; 1-禁用扫风\r\n\r\n* disS: 暂不支持\r\n\r\n样例:\r\n\r\n{\"match\":1, \"models\":[\r\n\r\n    {\"mode\":0,\"speeds\":[0,1,2,3],\"temps\":[18,19,20,21,22,23,24,25,26,27,28,29,30],\"directs\":[1,2],\"type\":2,\"light\":[],\"disD\":0,\"disL\":1},\r\n\r\n    {\"mode\":1,\"speeds\":[0,1,2,3],\"temps\":[16,17,18,19,20,21,22,23,24,25,26,27,28],\"directs\":[1,2],\"type\":2,\"light\":[0,1],\"disD\":0,\"disL\":0},\r\n\r\n    {\"mode\":2,\"speeds\":[0,1,2,3],\"temps\":[16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],\"directs\":[1,2],\"type\":2,\"light\":[0,1],\"disD\":0,\"disL\":0},\r\n\r\n    {\"mode\":3,\"speeds\":[0,1,2,3],\"temps\":[16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],\"directs\":[1,2],\"type\":2,\"light\":[0,1],\"disD\":1,\"disL\":0},\r\n\r\n    {\"mode\":4,\"speeds\":[],\"temps\":[16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],\"directs\":[1,2],\"type\":2,\"light\":[0,1]\"disD\":1,\"disL\":1}\r\n\r\n]}",
+      "access": 7,
+      "value": "{\"match\":1,\"models\":[{\"disD\":0,\"disL\":1,\"mode\":0,\"type\":2,\"speeds\":[0,1,2,3],\"temps\":[18,19,20,21,22,23,24,25,26,27,28,29,30],\"directs\":[1]},{\"disD\":0,\"disL\":1,\"mode\":1,\"type\":2,\"speeds\":[0,1,2,3],\"temps\":[18,19,20,21,22,23,24,25,26,27,28,29,30],\"directs\":[1]},{\"disD\":0,\"disL\":1,\"mode\":2,\"type\":2,\"speeds\":[0,1,2,3],\"temps\":[18,19,20,21,22,23,24,25,26,27,28,29,30],\"directs\":[1]},{\"disD\":0,\"disL\":1,\"mode\":3,\"type\":2,\"speeds\":[0,1,2,3],\"temps\":[],\"directs\":[1]},{\"disD\":0,\"disL\":1,\"mode\":4,\"type\":2,\"speeds\":[0],\"temps\":[],\"directs\":[1]}]}"
+    },
+    "8.0.2093": {
+      "name": "红外码设备资源下发，用于网关控制设备",
+      "description": "红外码设备资源下发，用于网关控制设备，下发内容唯一红外码标识key，网关可以根据该值获取到红外码",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2092": {
+      "name": "红外码资源下发，用于网关控制设备",
+      "description": "红外码资源下发，用于网关控制设备（直接下发红外码，ircode,freq,async三个字段）",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2045": {
+      "name": "设备在线离线状态",
+      "description": "0 离线  1 在线",
+      "access": 7,
+      "value": "1"
+    },
+    "8.0.2029": {
+      "name": "设备重启原因",
+      "description": "网关重启原因",
+      "access": 7,
+      "value": "0"
+    },
+    "8.0.2024": {
+      "name": "zigbee通道",
+      "description": "zigbee通道",
+      "access": 7,
+      "value": "11"
+    },
+    "8.0.2025": {
+      "name": "wifi通道",
+      "description": "wifi通道",
+      "access": 7,
+      "value": "6"
+    },
+    "8.0.8104": {
+      "name": "当前匹配的风速范围",
+      "description": "风速定义：0:自动，1:低，2:中，3:高\r\n数据格式：string hex\r\n字节顺序：byte0：风速0，byte1：风速1，byte2：风速2 ......\r\n按照风速定义的value值填充，根据实际支持的风速范围依次填充\r\n风速支持自动，低，中，高时：\"00010203\"",
+      "access": 7,
+      "value": "00010203"
+    },
+    "0.1.85": {
+      "name": "当前温度",
+      "description": "显示和查询设备识别的温度，单位：0.01摄氏度",
+      "access": 3,
+      "value": "2530"
+    },
+    "3.2.85": {
+      "name": "安睡状态",
+      "description": " ",
+      "access": 3,
+      "value": "0"
+    },
+    "14.18.85": {
+      "name": "睡眠功能的配置参数",
+      "description": " ",
+      "access": 7,
+      "value": "[0]"
+    },
+    "14.1.85": {
+      "name": "报警铃声",
+      "description": "播放警报index，当index=10000时播放默认铃声",
+      "access": 7,
+      "value": ""
+    },
+    "14.1.113": {
+      "name": "报警时长",
+      "description": "报警时长，-1表示循环播放，0表示只播放一次，大于0表示播放的秒数",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2337": {
+      "name": "连接中枢状态",
+      "description": "0: 未连接\r\n1: 已连接",
+      "access": 3,
+      "value": "1"
+    },
+    "8.0.2334": {
+      "name": "中枢能力",
+      "description": "下述每个bit取值为1表示具备对应的功能，取值为0表示不具备对应功能。\r\nbit 0: 具备中枢基本功能（支持创建中枢集群等）\r\nbit 1: 具有本地自动化模块ha_driven\r\nbit 2: 具备中枢的本地数据存储功能NAS\r\nbit 3: 支持SAAS\r\nbit 4: 支持本地AI\r\nbit 5~31: Reserved",
+      "access": 3,
+      "value": "167"
+    },
+    "8.0.2338": {
+      "name": "设备删除解绑的原因",
+      "description": "value：string，Access:report。取值为 JSON格式的字符串，格式具体为：\r\n{\"type\":xx,\"time\":\"\",\"prevDel\":xx,\"did\":\"lumi.xxxx\",\"model\":\"xxxx\"}\r\n\r\ntype ：uint8，设备删除操作的类型\r\ntime：uint32，离线的时间，Unix Time （0时区）\r\nprevDel： bool，网关是否开启防误删， 1开启 0未开启\r\ndid ：string，被删除子设备的did。当为第6种情况时（信息默认为空）。\r\nmodel： string，被删除子设备的did。当为第6种情况时（信息默认为空）。",
+      "access": 3,
+      "value": "{\"type\":1,\"time\":1777376476373,\"prevDel\":true,\"did\":\"lumi.54ef4410014081fb\",\"model\":\"lumi.switch.acn067\"}\n"
+    },
+    "3.1.85": {
+      "name": "空调开关状态",
+      "description": "空调状态   0:关闭，1:打开。该资源只读",
+      "access": 3,
+      "value": ""
+    },
+    "14.25.85": {
+      "name": "空调模式",
+      "description": "空调模式，0：未配置模式。",
+      "access": 7,
+      "value": "0"
+    }
+  },
+  "fetched_at": "2026-05-03T00:27:43.017337"
+}

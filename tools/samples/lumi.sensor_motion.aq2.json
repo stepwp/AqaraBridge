@@ -1,0 +1,38 @@
+{
+  "model": "lumi.sensor_motion.aq2",
+  "device_name": "人体传感器",
+  "model_type": 3,
+  "resources": {
+    "3.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "1"
+    },
+    "0.4.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "16"
+    },
+    "0.3.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "3"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "152"
+    },
+    "8.0.2008": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "3055"
+    }
+  },
+  "fetched_at": "2026-05-02T23:53:57.355286"
+}

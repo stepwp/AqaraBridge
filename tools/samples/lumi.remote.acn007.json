@@ -1,0 +1,20 @@
+{
+  "model": "lumi.remote.acn007",
+  "device_name": "无线开关 E1",
+  "model_type": 3,
+  "resources": {
+    "13.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "1"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "188"
+    }
+  },
+  "fetched_at": "2026-05-02T23:53:01.690531"
+}

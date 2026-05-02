@@ -1,0 +1,44 @@
+{
+  "model": "lumi.light.acn128",
+  "device_name": "筒射灯 T3",
+  "model_type": 3,
+  "resources": {
+    "8.0.2030": {
+      "name": "断电记忆",
+      "description": "0：关闭断电记忆。1：打开断电记忆",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2041": {
+      "name": "Model ID",
+      "description": "zigbee设备向网关上报model id时（比如戳设备小孔），网关向云端上报该资源",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2007": {
+      "name": "ZigBee信号强度",
+      "description": "ZigBee信号强度",
+      "access": 7,
+      "value": "152"
+    },
+    "14.1.85": {
+      "name": "亮度百分比",
+      "description": "亮度百分比",
+      "access": 7,
+      "value": "30"
+    },
+    "4.1.85": {
+      "name": "开关状态",
+      "description": "开关状态，0:关闭，1:打开",
+      "access": 7,
+      "value": "0"
+    },
+    "14.2.85": {
+      "name": "色温值",
+      "description": "色温值,取值为微倒度，即1000000/色温度。比如5000K，则色温值为1000000/5000=200.色温度范围2700K~6000K",
+      "access": 7,
+      "value": "370"
+    }
+  },
+  "fetched_at": "2026-05-03T00:28:07.153942"
+}

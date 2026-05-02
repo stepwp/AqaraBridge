@@ -1,0 +1,176 @@
+{
+  "model": "lumi.sensor_ht.agl001",
+  "device_name": "温控伴侣 W100",
+  "model_type": 3,
+  "resources": {
+    "0.1.718": {
+      "name": "温度上报阈值",
+      "description": "温度上报阈值",
+      "access": 7,
+      "value": "50.000000"
+    },
+    "13.5.85": {
+      "name": "舒适度状态显示",
+      "description": "舒适度状态展示",
+      "access": 3,
+      "value": ""
+    },
+    "0.2.85": {
+      "name": "环境湿度",
+      "description": "环境湿度",
+      "access": 3,
+      "value": "6998"
+    },
+    "0.2.45": {
+      "name": "过湿告警阈值",
+      "description": "过湿告警阈值",
+      "access": 7,
+      "value": "9999.000000"
+    },
+    "0.2.59": {
+      "name": "过干告警阈值",
+      "description": "过干告警阈值",
+      "access": 7,
+      "value": "0.000000"
+    },
+    "8.0.9001": {
+      "name": "低电量报警",
+      "description": "低电报警",
+      "access": 3,
+      "value": "0"
+    },
+    "14.1.85": {
+      "name": "温控器模式",
+      "description": "温控器的模式控制设置及状态上报",
+      "access": 7,
+      "value": "0"
+    },
+    "1.111.85": {
+      "name": "温湿度采集周期设置",
+      "description": "用户配置温湿度采集的时间周期",
+      "access": 7,
+      "value": "1000.000000"
+    },
+    "13.1.85": {
+      "name": "第一键状态信息上报",
+      "description": "按键状态信息上报",
+      "access": 3,
+      "value": "1"
+    },
+    "13.7.85": {
+      "name": "湿度告警提示",
+      "description": "湿度告警提示",
+      "access": 2,
+      "value": "0"
+    },
+    "13.6.85": {
+      "name": "温度告警提示",
+      "description": "温度告警提示",
+      "access": 2,
+      "value": "0"
+    },
+    "1.1.85": {
+      "name": "温度设置",
+      "description": "温度设置",
+      "access": 7,
+      "value": ""
+    },
+    "14.104.85": {
+      "name": "温度上报方式",
+      "description": "选择温度上报方式",
+      "access": 7,
+      "value": "1"
+    },
+    "1.1.69": {
+      "name": "设定温度下限",
+      "description": "温度下限设定",
+      "access": 3,
+      "value": ""
+    },
+    "1.1.65": {
+      "name": "设定温度上限",
+      "description": "温度上限设定",
+      "access": 3,
+      "value": ""
+    },
+    "14.3.85": {
+      "name": "温控器风速",
+      "description": "温控器的风速控制设置及状态上报",
+      "access": 7,
+      "value": "0"
+    },
+    "4.1.85": {
+      "name": "温控器开关",
+      "description": "绑定的温控器开关",
+      "access": 7,
+      "value": ""
+    },
+    "1.2.65": {
+      "name": "舒适度设定温度上限",
+      "description": "舒适度温度上限设定",
+      "access": 7,
+      "value": "2600"
+    },
+    "13.2.85": {
+      "name": "第二键状态信息上报",
+      "description": "按键状态信息上报",
+      "access": 3,
+      "value": "1"
+    },
+    "1.114.85": {
+      "name": "湿度上报周期",
+      "description": "湿度上报周期",
+      "access": 7,
+      "value": "30000.000000"
+    },
+    "8.0.2096": {
+      "name": "设备查找",
+      "description": "通过网关向设备发送identify命令查找设备",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2008": {
+      "name": "电池电压值",
+      "description": "电池上报的电压值",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2001": {
+      "name": "剩余电量百分比",
+      "description": "电池剩余电量百分比",
+      "access": 3,
+      "value": "100"
+    },
+    "0.1.59": {
+      "name": "低温告警阈值",
+      "description": "低温告警阈值",
+      "access": 7,
+      "value": "-2000.000000"
+    },
+    "0.1.45": {
+      "name": "高温告警阈值",
+      "description": "高温告警阈值",
+      "access": 7,
+      "value": "6000.000000"
+    },
+    "0.1.85": {
+      "name": "环境温度",
+      "description": "环境温度",
+      "access": 3,
+      "value": "2641"
+    },
+    "13.3.85": {
+      "name": "第三键状态信息上报",
+      "description": "按键状态信息上报",
+      "access": 3,
+      "value": "1"
+    },
+    "1.113.85": {
+      "name": "温度上报周期",
+      "description": "温度上报周期，每间隔value个ms上传一次温度数据。默认温度上报周期为30s",
+      "access": 7,
+      "value": "30000.000000"
+    }
+  },
+  "fetched_at": "2026-05-03T00:29:00.016340"
+}

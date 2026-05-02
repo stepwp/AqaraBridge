@@ -1,0 +1,26 @@
+{
+  "model": "lumi.switch.b1lacn02",
+  "device_name": "智能墙壁开关 D1 单火线单键版",
+  "model_type": 3,
+  "resources": {
+    "4.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "0"
+    },
+    "13.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "1"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "148"
+    }
+  },
+  "fetched_at": "2026-05-02T23:55:13.797357"
+}

@@ -1,0 +1,32 @@
+{
+  "model": "lumi.sensor_magnet.aq2",
+  "device_name": "门窗传感器",
+  "model_type": 3,
+  "resources": {
+    "3.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "0"
+    },
+    "8.0.2007": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "136"
+    },
+    "8.0.2008": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2965"
+    },
+    "8.0.2001": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "84"
+    }
+  },
+  "fetched_at": "2026-05-02T23:53:44.693455"
+}

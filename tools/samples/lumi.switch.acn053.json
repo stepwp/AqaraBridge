@@ -1,0 +1,32 @@
+{
+  "model": "lumi.switch.acn053",
+  "device_name": "繁星旋钮 V1",
+  "model_type": 2,
+  "resources": {
+    "4.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "0"
+    },
+    "0.1.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "2459"
+    },
+    "0.2.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "8574"
+    },
+    "4.2.85": {
+      "name": "",
+      "description": "",
+      "access": 0,
+      "value": "1"
+    }
+  },
+  "fetched_at": "2026-05-02T23:54:49.708212"
+}

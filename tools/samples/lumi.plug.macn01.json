@@ -1,0 +1,86 @@
+{
+  "model": "lumi.plug.macn01",
+  "device_name": "Aqara智能插座 T1",
+  "model_type": 3,
+  "resources": {
+    "0.12.85": {
+      "name": "负载功率",
+      "description": "设备上报当前的工作功率",
+      "access": 3,
+      "value": "0.000000"
+    },
+    "8.0.2032": {
+      "name": "开关指示灯",
+      "description": "0：关闭指示灯，1：打开;默认关闭",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2030": {
+      "name": "断电记忆",
+      "description": "0：关闭断电记忆，1：打开;默认关闭",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2031": {
+      "name": "充电保护",
+      "description": "0：关闭充电保护，1：打开;默认关闭",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2041": {
+      "name": "Model ID",
+      "description": "zigbee设备向网关上报model id时（比如戳设备小孔），网关向云端上报该资源",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2042": {
+      "name": "最大功率参数",
+      "description": "最大功率参数的配置，单位W",
+      "access": 7,
+      "value": ""
+    },
+    "8.0.2007": {
+      "name": "Zigbee信号强度",
+      "description": "Zigbee信号强度",
+      "access": 7,
+      "value": "124"
+    },
+    "8.0.2014": {
+      "name": "设备保护",
+      "description": "zigbee子设备上报，0：无通用类型异常；1：过温保护；2：过载保护；3：过温异常；4：过载异常；5：过温解除；6：过载解除",
+      "access": 7,
+      "value": "0"
+    },
+    "8.0.2024": {
+      "name": "zigbee通道",
+      "description": "zigbee通道",
+      "access": 7,
+      "value": ""
+    },
+    "4.10.85": {
+      "name": "按键使能",
+      "description": "0：物理控制使能，1：断开物理控制",
+      "access": 7,
+      "value": ""
+    },
+    "0.14.85": {
+      "name": "负载有效电流",
+      "description": "负载有效电流，单位是微安（uA)。每个心跳时上报",
+      "access": 3,
+      "value": "0.000000"
+    },
+    "4.1.85": {
+      "name": "插座开关状态",
+      "description": "插座打开/关闭,0:关闭，1:打开,2:toggle",
+      "access": 7,
+      "value": "0"
+    },
+    "0.13.85": {
+      "name": "消耗的电能",
+      "description": "消耗的电能,单位瓦时（0.001度）。每个心跳时上报",
+      "access": 3,
+      "value": "157.720901"
+    }
+  },
+  "fetched_at": "2026-05-03T00:28:42.128599"
+}
